@@ -92,6 +92,41 @@
           </div>
         </fieldset>
 
+        <table>
+          <caption>
+            Results
+          </caption>
+          <thead>
+            <tr>
+              <th>Operating System</th>
+              <th>Browser</th>
+              <th>Assistive tech</th>
+              <th>Notes</th>
+              <th>Pass/fail</th>
+            </tr>
+          </thead>
+          <tr>
+            <td>Windows 10</td>
+            <td>Chrome 94</td>
+            <td>JAWS 2021</td>
+            <td>Works as desired. Heading announced nicely in the flow, as well as when navigating headings.</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <td>Windows 10</td>
+            <td>Chrome 94</td>
+            <td>NVDA 2021.1</td>
+            <td>
+              <p>Works mostly as desired. Heading announced nicely in the flow, as well as when navigating headings.</p>
+              <p>
+                Slight oddity when navigating back out of the heading, it says "Out of heading, out of heading" -
+                clearly it is recognising both headings.
+              </p>
+            </td>
+            <td>⚠️</td>
+          </tr>
+        </table>
+
         <p>
           Example markup lifted from
           <a href="https://service-manual.nhs.uk/design-system/components/fieldset"

@@ -49,48 +49,30 @@
               >https://github.com/FreedomScientific/VFO-standards-support/issues/549</a
             >.
           </p>
+          <p>The legend should also be read out to introduce the radios.</p>
         </div>
 
-        <fieldset class="nhsuk-fieldset">
-          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l" role="heading" aria-level="1">
-            <span class="nhsuk-fieldset__heading">What is your address?</span>
-          </legend>
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l" role="heading" aria-level="1">
+              <span class="nhsuk-fieldset__heading">Are you 18 or over?</span>
+            </legend>
 
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="address-line-1">
-              Building and street
-              <span class="nhsuk-u-visually-hidden">line 1 of 2</span>
-            </label>
-            <input class="nhsuk-input" id="address-line-1" name="address-line-1" type="text" />
-          </div>
+            <div class="nhsuk-radios">
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes" />
+                <label class="nhsuk-label nhsuk-radios__label" for="example-1"> Yes </label>
+              </div>
 
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="address-line-2">
-              <span class="nhsuk-u-visually-hidden">Building and street line 2 of 2</span>
-            </label>
-            <input class="nhsuk-input" id="address-line-2" name="address-line-2" type="text" />
-          </div>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no" />
+                <label class="nhsuk-label nhsuk-radios__label" for="example-2"> No </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
 
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="address-town"> Town or city </label>
-            <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-town" name="address-town" type="text" />
-          </div>
-
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="address-county"> County </label>
-            <input class="nhsuk-input nhsuk-u-width-two-thirds" id="address-county" name="address-county" type="text" />
-          </div>
-
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="address-postcode"> Postcode </label>
-            <input
-              class="nhsuk-input nhsuk-input--width-10"
-              id="address-postcode"
-              name="address-postcode"
-              type="text"
-            />
-          </div>
-        </fieldset>
+        <hr />
 
         <table>
           <caption>
@@ -109,45 +91,53 @@
             <td>Windows 10</td>
             <td>Chrome 94</td>
             <td>JAWS 2021</td>
-            <td>Works as desired. Heading announced nicely in the flow, as well as when navigating headings.</td>
-            <td>✅</td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <td>Windows 10</td>
             <td>Chrome 94</td>
             <td>NVDA 2021.1</td>
-            <td>Works as desired. Heading announced nicely in the flow, as well as when navigating headings.</td>
+            <td>
+              <p>
+                Pressing `F` to move to the radio buttons should announce "Are you 18 or over", before announcing the
+                radios. Which it does.
+              </p>
+              <p style="background-color: yellow">
+                If you press `H` to announce the main heading, and then `F` to move to the form field, it does not
+                re-announce the legend. Is this ok? Assuming the h1 is worded like a question, people should make the
+                connection between it and the subsequent yes/no questions?
+              </p>
+            </td>
             <td>✅</td>
           </tr>
           <tr>
             <td>Windows 10</td>
             <td>IE11</td>
             <td>NVDA 2021.1</td>
-            <td>Works as desired. Heading announced nicely in the flow, as well as when navigating headings.</td>
-            <td>✅</td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <td>Windows 10</td>
             <td>Edge</td>
             <td>NVDA 2021.1</td>
-            <td>Works as desired. Heading announced nicely in the flow, as well as when navigating headings.</td>
-            <td>✅</td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <td>Android 10</td>
             <td>Chrome 94</td>
             <td>TalkBack</td>
-            <td>
-              <p>Works as desired. Heading announced nicely in the flow, as well as when navigating headings.</p>
-            </td>
-            <td>✅</td>
-            <tr>
-                <td>iOS</td>
-                <td>Chrome 94</td>
-                <td>Voiceover</td>
-                <td></td>
-                <td></td>
-              </tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>iOS</td>
+            <td>Chrome 94</td>
+            <td>Voiceover</td>
+            <td></td>
+            <td></td>
           </tr>
         </table>
 

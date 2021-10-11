@@ -41,7 +41,7 @@
           <span class="nhsuk-u-visually-hidden">Information: </span>
           <p>Additional aria added to legend to work around JAWS bug.</p>
           <p>Original &lt;h1&gt; removed - relying only on aria role on legend.</p>
-          <p><code>&lt;legend role="heading" aria-level="1"&gt;&lt;h1&gt;...&lt;/h1&gt;&lt;/legend&gt;</code></p>
+          <p><code>&lt;legend role="heading" aria-level="1"&gt;&lt;span&gt;...&lt;/span&gt;&lt;/legend&gt;</code></p>
           <p>Pressing <code>H</code> in this example should list headings in JAWS.</p>
           <p>
             See
@@ -91,8 +91,11 @@
             <td>Windows 10</td>
             <td>Chrome 94</td>
             <td>JAWS 2021</td>
-            <td></td>
-            <td></td>
+            <td>
+              Works as expected. Pressing INS+F5 to show all form fields demonstrates that JAWS is still maintaining the
+              association between form fields and legends despite the `role="heading"`
+            </td>
+            <td>✅</td>
           </tr>
           <tr>
             <td>Windows 10</td>
@@ -100,13 +103,13 @@
             <td>NVDA 2021.1</td>
             <td>
               <p>
-                Pressing `F` to move to the radio buttons should announce "Are you 18 or over", before announcing the
-                radios. Which it does.
+                Pressing <code>F</code> to move to the radio buttons should announce "Are you 18 or over", before
+                announcing the radios. Which it does.
               </p>
               <p style="background-color: yellow">
-                If you press `H` to announce the main heading, and then `F` to move to the form field, it does not
-                re-announce the legend. Is this ok? Assuming the h1 is worded like a question, people should make the
-                connection between it and the subsequent yes/no questions?
+                If you press <code>H</code> to announce the main heading, and then <code>F</code> to move to the form
+                field, it does not re-announce the legend. Is this ok? Assuming the h1 is worded like a question, people
+                should make the connection between it and the subsequent yes/no questions?
               </p>
             </td>
             <td>✅</td>
@@ -115,15 +118,18 @@
             <td>Windows 10</td>
             <td>IE11</td>
             <td>NVDA 2021.1</td>
-            <td></td>
-            <td></td>
+            <td>
+              Pressing <code>F</code> does not announce the legend first as it has in other browsers, but it does not do
+              this in the reference example either so this is an existing deficiency of this browser.
+            </td>
+            <td>✅</td>
           </tr>
           <tr>
             <td>Windows 10</td>
             <td>Edge</td>
             <td>NVDA 2021.1</td>
             <td></td>
-            <td></td>
+            <td>✅</td>
           </tr>
           <tr>
             <td>Android 10</td>
